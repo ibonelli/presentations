@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Blockchain Technology and cryptoassets</title>
+
+		<!-- Remote !-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/simple.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css">
+
+		<!-- Local
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		!-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="#C6F3C9">
+					<section>
+						<h3>Blockchain Technology</h3>
+						<h3>and cryptoassets</h3>
+						<img src="files/blockchain01.jpg"/>
+					</section>
+					<section>
+						<h2>¿Como surge?</h2>
+						<ul style="font-size: 90%;">
+							<li style="font-size: 75%;">Subprime mortgage crisis (2008): ¿Es realmente el origen?
+								<ul>
+									<li><a href="https://analyticsindiamag.com/origin-bitcoin-brief-history/">How do the actions of your Government affect your money?</a></li>
+									<li><a href="https://www.coindesk.com/bitcoin-financial-crisis">Bitcoin Was Not a Response to the Financial Crisis</a></li>
+								</ul>
+							</li>
+							<li>Satoshi Nakamoto <span style="font-size: 80%;">publication on a small cryptography IIRC mailing list in late 2008</span> <a href="https://bitcoin.org/bitcoin.pdf">his paper</a>. <span style="font-size: 80%;">(<a href="https://www.mail-archive.com/search?l=cryptography@metzdowd.com&q=from:%22Satoshi+Nakamoto%22">mails</a>, <a href="https://satoshi.nakamotoinstitute.org/emails/">forum</a>, <a href="https://www.nytimes.com/2013/12/15/sunday-review/the-bitcoin-ideology.html">NY Times</a> & <a href="https://cryptoaudiences.com/blog/a-decade-of-crypto-advertising">10yrs</a></span>)</li>
+							<li><span style="font-size: 80%;">Quote: </span>"The root problem with conventional currency is all the trust that’s required to make it work." <span style="font-size: 75%;">(Also see Yuval Noah Harari "Homo Deus" inspired <a href="https://www.ted.com/talks/yuval_noah_harari_what_explains_the_rise_of_humans?language=en">TED Talk</a>)</span></li>
+						</ul>
+					</section>
+					<section>
+						<h2>BitCoin: Precio Historico</h2>
+						<p style="font-size: 40%;">
+							<a href="files/Bitcoin_Value.png"><img src="files/Bitcoin_Value.png"/></a>
+							<br/>
+							<a href="https://www.tradingview.com/chart/">Valor en vivo desde tradingview</a> y cosas que pueden afectar el precio como <a href="https://www.scmp.com/business/article/3133281/bitcoin-sinks-after-musk-halts-tesla-electric-car-purchases-cryptocurrency">Tesla no acepta más bitcoin</a> (2021/05/12).
+						</p>
+					</section>
+					<section>
+						<h2>Precio BitCoin vs Halving</h2>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<p>
+								<span style="font-size: 75%;">Full Timeline</span><br/>
+								<a href="files/Bitcoin_Halving_vs_Price.png"><img src="files/Bitcoin_Halving_vs_Price.png"/></a><br/>
+							</p>
+						</ul>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<p>
+								<span style="font-size: 75%;">Week by week comparison</span><br/>
+								<a href="files/Bitcoin_Halving_vs_Weeks.png"><img src="files/Bitcoin_Halving_vs_Weeks.png"/></a>
+							</p>
+						</ul>
+						<p style="font-size: 50%;">Y <a href="files/BitcoinPrice_vs_HalvingEpoch.jpg">acá se puede ver una versión más "marketinera"</a> de lo mismo.</p>
+						<p style="font-size: 50%;">En resumen comportamiento tipo el "oro" (principio de escasez, dificil de minarlo, etc...).</p>
+					</section>
+					<section>
+						<h2>BitCoin: Market Behavior</h2>
+						<a href="files/Bitcoin-Supply-vs-Market-Intention.jpg"><img style="width: 600px;" src="files/Bitcoin-Supply-vs-Market-Intention.jpg"/></a>
+						<p style="font-size: 50%;">Fuente: <a href="https://www.visualcapitalist.com/why-the-market-is-thinking-about-bitcoin-differently/">Why the Market is Thinking About Bitcoin Differently</a></p>
+						<p style="font-size: 50%;">Otra visión de Bitcoin como un assest/acción: "<a href="https://www.visualcapitalist.com/bitcoin-is-the-fastest-asset-to-reach-a-1-trillion-market-cap/">Fastest Asset to Reach a $1 Trillion Market Cap</a>".</p>
+					</section>
+				</section>
+
+				<section data-background="#88B4B4">
+					<section>
+						<h2>¿Que es blockchain?</h2>
+						<ul>
+							<li><b>Criptografía asimétrica</b>: <span style="font-size: 80%;">PGP (1991)</span></li>
+							<li><b>Base de datos distribuida</b>: <span style="font-size: 80%;">Cassandra, Oracle, ...</span></li>
+							<li><b>Transmisión de datos entre pares</b>: <span style="font-size: 80%;">Torrent, <a href="https://en.wikipedia.org/wiki/Tor_(anonymity_network)">TOR</a>, <a href="https://en.wikipedia.org/wiki/Gossip_protocol">Gossip</a>, ...</span></li>
+							<li><b>Consenso sobre los datos</b>: <span style="font-size: 80%;">PoW, PoS, PoA, ...</span></li>
+							<li><b>Seguridad</b>: <span style="font-size: 80%;">Hash or <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle Tree</a> (1978), <a href="https://en.wikipedia.org/wiki/Byzantine_fault">tolerancia a faltas bizantinas (BFT)</a> y evitar el <a href="https://en.wikipedia.org/wiki/Double-spending">doble gasto</a>.</span></li>
+							<li><b>Teoría de juegos</b></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Criptografía asimétrica (I)</h2>
+						<p>La criptografía asimétrica se utiliza para crear las direcciones.</p>
+						<p>La clave pública es la dirección y para probar que uno es el dueño debe presentar la clave privada.</p>
+						<ul class="col" style="width: 500px; display: inline-block; vertical-align: top;">
+							<p>Un ejemplo de una curva elíptica utilizada por Bitcoin y Ethereum es <a href="https://en.bitcoin.it/wiki/Secp256k1">Secp256k1</a>.</p>
+						</ul>
+						<ul class="col" style="width: 200px; display: inline-block; vertical-align: top;">
+							<a href="files/Eliptic_Curve.png"><img src="files/Eliptic_Curve.png"/></a>
+						</ul>
+					</section>
+					<section>
+						<h3>Criptografía asimétrica (II)</h3>
+						<h4>Mi dirección en la blockchain</h4>
+						<br/>
+						<img src="files/Bitcoin_How-to-generate-private-public-address.png"/>
+						<br/>
+						<p style="font-size: 50%;">Bitcoin: How to generate private/public address (MUY similar a Ethereum)</p>
+					</section>
+					<section>
+						<h2>DB distribuida y Seguridad</h2>
+						<p>Al guardar los datos en una red peer-to-peer descentralizada, se elimina la posibilidad de que un jugador los altere.</p>
+						<p>Como los datos se guardan encadenando bloques con una estructura tipo Merkle Tree, una vez acordados no se puedan cambiar.</p>
+						<p>Cada bloque nuevo actualiza el estado de la blockchain y debe acordarse.</p>
+					</section>
+					<section>
+						<h2>Merkle Tree</h2>
+						<img src="files/Bitcoin_Block_Data.png"/>
+					</section>
+					<section>
+						<h2>Transmisión de datos<br/>entre pares</h2>
+						<img src="files/Peer-to-peer.png"/>
+					</section>
+					<section>
+						<h2>Consenso sobre los datos</h2>
+						<ul>
+							<li><b>Proof of Work (Pow)</b>: <span style="font-size: 80%;">Usado hoy en Bitcoin y Ethereum entre otros (<a href="files/Proof-of-Work_Explanation.jpg">como funciona</a> y su <a href="files/Proof-of-Work_Flowchart.png">algoritmo simplificado</a>).</span></li>
+							<li><b>Proof of Authority (PoA)</b>: <span style="font-size: 80%;">Permite un consenso mucho más rápido, pero impone jerarquías.</span></li>
+							<li><b>Proof os Stake (PoS)</b>: <span style="font-size: 80%;"><a href="https://ethereum.org/en/eth2/staking/">Futuro de Ethereum</a>, <a href="https://www.algorand.com/technology/algorand-protocol">Algorand</a>, impone una jerarquía dinámica basada en la inversión.</span></li>
+							<li><a href="https://101blockchains.com/consensus-algorithms-blockchain/">Otros consensos</a>.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Teoría de Juegos</h2>
+						<ul>
+							<li><b><a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_juegos">Teoría de Juegos</a></b>: <span style="font-size: 80%;"><a href="https://www.youtube.com/watch?v=-9vlXXK491c">Jugadores, Acciones, Estrategias, Información, Pagos y Equilibrios</a>.</span></li>
+							<li><b><a href="https://es.wikipedia.org/wiki/Sistema_multiagente">Sistemas multiagente</b></a>: <span style="font-size: 80%;">Entorno, comunicaciones, planificación, comportamiento, acciones.</span></li>
+							<li><b><a href="https://es.wikipedia.org/wiki/Algoritmo_evolutivo">Sistemas evolutivos</a></b>. <span style="font-size: 80%;">Como por ejemplo los <a href="https://es.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico">algoritmos genéticos</a> (Selección, cruzamiento y mutación), inteligencia enjambre, etc...</span></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Ejemplo sencillo</h2>
+						<img src="files/how-blockchain-works.jpg"/>
+						<br/>
+						<p style="font-size: 50%;">Fuente: <a href="https://masterthecrypto.com/top-10-crypto-blockchain-infographics-you-must-know/">Top 10 crypto/blockchain infographics you must know</a></p>
+					</section>
+				</section>
+
+				<section data-background="#9CBED7">
+					<section>
+						<h2>La disrupción de Ethereum</h2>
+						<table style="font-size: 50%;">
+							<thead>
+								<tr>
+									<th></th>
+									<th>BitCoin</th>
+									<th>Ethereum</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Release</td>
+									<td>9 Jan 2008</td>
+									<td>30 Jul 2015</td>
+								</tr>
+								<tr>
+									<td>Release Method</td>
+									<td>Genesis Block Mined</td>
+									<td>Presale</td>
+								</tr>
+								<tr>
+									<td>Used for</td>
+									<td>Digital Currency</td>
+									<td>Digital Currency<br/>Smart Contracts</td>
+								</tr>
+								<tr>
+									<td>Mining</td>
+									<td>ASIC Miners</td>
+									<td>GPUs</td>
+								</tr>
+								<tr>
+									<td>Smallest Unit</td>
+									<td>1 Satoshi<br/>0.00000001 BTC<br/>8 digits</td>
+									<td>1 Wei<br/>0.000000000000000001 ETH<br/>18 digits</td>
+								</tr>
+								<tr>
+									<td>Purpose</td>
+									<td>Be a globally decentralized<br/>payment system.</td>
+									<td>Be a decentralized system<br/>to power DApps.</td>
+								</tr>
+								<tr>
+									<td>Max Supply</td>
+									<td>21'000'000</td>
+									<td>No fixed supply</td>
+								</tr>
+								<tr>
+									<td>Block Rewards</td>
+									<td>6.25 BTC<br/>Halving every 210'000 blocks</td>
+									<td><a href="https://eips.ethereum.org/EIPS/eip-3368">2 ETH</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>Nodos en Ethereum</h2>
+						<ul style="font-size: 90%;">
+							<li><b>Full Node</b>: <span style="font-size: 75%;">Encargado de revisar que los bloques estén conforme al consenso establecido. Requieren tener toda la blockchain.</span></li>
+							<li><b>Light Node</b>: <span style="font-size: 75%;">Es un nodo que no tiene toda la blockchain, solamente los headers de los bloques para poder verificar transacciones con el método SPV (Simplified Payment Verification).</span></li>
+							<li><b>Nodo Minero</b>: <span style="font-size: 75%;">Full Node que intenta encontrar el hash correcto para crear el bloque.</span></li>
+							<li><b>Minero No-Nodo</b>: <span style="font-size: 75%;">Usados en pools de minería y están conectadas a un Full Node.</span></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Smart Contracts<br/><span style="font-size: 70%;">en Ethereum</span></h2>
+						<ul style="font-size: 90%;">
+							<li>Ethereum Virtual Machine (EVM)</li>
+							<li>Development Environment: <span style="font-size: 75%;"><a href="https://geth.ethereum.org/docs/getting-started">GethNode</a>, <a href="https://web3js.readthedocs.io/en/v1.3.4/">Web3.js</a>/<a href="https://web3py.readthedocs.io/en/stable/">Web3.py</a>, <a href="https://docs.soliditylang.org/en/v0.4.21/installing-solidity.html">SolidityCompiler</a>, <a href="https://www.trufflesuite.com/">Truffle</a>, <a href="https://www.trufflesuite.com/ganache">Ganache</a>, <a href="https://ropsten.etherscan.io/">Testnet</a>, <a href="https://faucet.ropsten.be/">Faucets</a>, etc...</span></li>
+							<li>ERC20 token standard (<a href="https://eips.ethereum.org/EIPS/eip-20">eip-20</a> & <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/">erc-20</a>)</li>
+							<li>Security concerns: <span style="font-size: 75%;"><a href="https://dasp.co/">DASP</a>, <a href="https://www.coinfabrik.com/services/smart-contract-audits/">SC Audits</a>, <a href="https://blog.coinfabrik.com/using-the-cardcontact-smartcard-usb-hsm-in-an-ethereum-poa-chain/">Securing Keys</a>, etc...</span></li>
+							<li>Blockchain SC deployment <span style="font-size: 75%;">(<a href="https://infura.io/">Infura</a>, nodos, etc...)</span></li>
+							<li><a href="https://metamask.io/">MetaMask</a> <span style="font-size: 75%;">(a Web3.js online wallet)</span></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Smart Contracts</h2>
+						<p>en General</p>
+						<ul style="font-size: 90%;">
+							<li><a href="https://developers.rsk.co/">RSK</a> <span style="font-size: 70%;">(also using ETH EVM)</span></li>
+							<li><a href="https://ewasm.readthedocs.io/en/mkdocs/">Ethereum WebAssembly</a> (<a href="https://medium.com/chainsafe-systems/ethereum-2-0-a-complete-guide-ewasm-394cac756baf">ETH2.0</a>)</li>
+							<li><a href="https://github.com/aeternity/aesophia/blob/lima/docs/sophia.md">AEternity Sophia</a></li>
+							<li><a href="https://medium.com/algorand/understanding-algorand-smart-contracts-b9fc743e7a0f">AlgoRand TEAL</a></li>
+							<li><a href="https://hyperledger-fabric.readthedocs.io/en/release-2.2/smartcontract/smartcontract.html">HyperLedger JS or Go</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Limitaciones</h2>
+						<p>de BitCoin y Ethereum</p>
+						<table style="font-size: 50%;">
+							<thead>
+								<tr>
+									<th></th>
+									<th>BitCoin</th>
+									<th>Ethereum</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Block Time</td>
+									<td>10 Mins</td>
+									<td>12-14 segs</td>
+								</tr>
+								<tr>
+									<td>Throughput</td>
+									<td>7-8 tps</td>
+									<td>15-20 tps</td>
+								</tr>
+								<tr>
+									<td>Energy Used (Yearly)</td>
+									<td>77.78 TW</td>
+									<td>14.81 TW</td>
+								</tr>
+								<tr>
+									<td>Transaction Fee</td>
+									<td><a href="https://ycharts.com/indicators/bitcoin_average_transaction_fee">55 usd (aprox)</a></td>
+									<td><a href="https://ycharts.com/indicators/ethereum_average_transaction_fee">30 usd (aprox)</a></td>
+								</tr>
+								<tr>
+									<td>Scalability</td>
+									<td>The Lighting Network<br/>(Layer 2 solution)<br/>+ RSK Network for SC</td>
+									<td>Moving from PoW to PoS<br/>(with ETH2.0) and<br/>Layer 2 Raiden Network</td>
+								</tr>
+								<tr>
+									<td>TX Confirmation Time</td>
+									<td>30 mins</td>
+									<td>40 secs</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+
+				<section data-background="#FAFACF">
+					<section>
+						<h2>Mundo Crypto: Tokens</h2>
+						<p>Tokens: ERC-20 (ie. <a href="https://coinmarketcap.com/currencies/tether/">USDT</a>)</p>
+						<p><span style="font-size: 80%;">Non Fungible Token</span> (NFT): ERC-721<span style="font-size: 80%;"> (ie. <a href="https://es.wikipedia.org/wiki/CryptoKitties">CryptoKitties</a>)</span></p>
+						<p style="font-size: 80%;">Raise Funding, Inversiones, Financiamiento, etc...</p>
+						<ul style="font-size: 60%;">
+							<li><span>Initial Coin Offering</span> (<a href="https://coinmarketcap.com/alexandria/glossary/initial-coin-offering-ico">ICO</a><span style="font-size: 60%;">, publicas</span>)</li>
+							<li><span>Security Token Offering</span> (<a href="https://coinmarketcap.com/alexandria/glossary/security-token">STO</a><span style="font-size: 60%;"></span>)</li>
+							<li><span>Initial Exchange Offering</span> (<a href="https://coinmarketcap.com/alexandria/glossary/initial-exchange-offering">IEO</a><span style="font-size: 60%;">, privadas</span>)</li>
+							<li><span>Token Generation Event</span> (<a href="https://coinmarketcap.com/alexandria/glossary/token-generation-event">TGE</a>)</li>
+						</ul>
+						<p style="font-size: 60%;">Utility (p/ej SUBE, sin regulación) vs Security (Inversion, <a href="https://www.sec.gov/">SEC</a>/<a href="https://www.cnv.gov.ar/sitioWeb/Home/Contacto">CNV</a> regula). -- <span style="font-size: 60%;"><a href="https://consumer.findlaw.com/securities-law/what-is-the-howey-test.html">Howey Test</a></span></p>
+					</section>
+					<section>
+						<h2>Mundo Crypto: Jugadores</h2>
+						<ul>
+							<li><a href="https://en.wikipedia.org/wiki/Due_diligence">Regulaciones</a>: <span style="font-size: 50%;">Know Your Customer (KYC) y Anti-Money Laundering (AML)</span></li>
+							<li>Wallets Software: <span style="font-size: 60%;"><a href="https://electrum.org/">Electrum (BTC)</a>, <a href="https://metamask.io/">MetaMask (ETH)</a>, <a href="https://trustwallet.com/">Trust</a>, etc...</span></li>
+							<li>Wallets Hardware: <span style="font-size: 60%;"><a href="https://www.ledger.com/">Ledger</a> & <a href="https://trezor.io/">Trezor</a>.</span></li>
+							<li>Multisignature Wallet <span style="font-size: 60%;">(ie. <a href="https://github.com/gnosis/safe-contracts">GNOSIS</a>)</span></li>
+							<li>Exchanges: <span style="font-size: 60%;"><a href="https://www.coinbase.com">Coinbase</a>, <a href="https://www.binance.com/en">Binance</a>, <a href="https://www.bitfinex.com/">Bitfinex</a>, <a href="https://www.kraken.com/">Kraken</a>, <a href="https://cex.io/">CEXio</a>, etc...</span></li>
+							<li>Oracles: <span style="font-size: 60%;"><a href="https://chain.link/">ChainLink</a>, <a href="https://provable.xyz/">Provable</a>, <a href="">Uniswap</a>, etc...</span></li>
+							<li>Mining farms/pools: <span style="font-size: 60%;"><a href="https://www.buybitcoinworldwide.com/mining/pools/">Un jugador más del PoW</a>.</span></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Mundo Crypto: Exchanges</h2>
+						<a href="files/EchangesArchitecture.jpeg"><img style="width: 600px;" src="files/EchangesArchitecture.jpeg"/></a>
+						<br/>
+						<p style="font-size: 60%;">Exchanges descentralizados: <a href="https://uniswap.org/">Uniswap</a>, <a href="https://liquality.io/">Liquality</a>, <a href="https://ddex.io/">DDEX</a>, <a href="https://defiprime.com/exchanges">etc</a>...</p>
+					</section>
+					<section>
+						<h2>Mundo Crypto: Inversiones</h2>
+						<ul>
+							<li>Inversiones: <span style="font-size: 60%;"><a href="https://www.investopedia.com/terms/v/vesting.asp">Vesting</a>, <a href="https://www.investopedia.com/terms/p/plstatement.asp">Profit and Loss</a>, <a href="https://es.wikipedia.org/wiki/Contrato_de_futuros">Mercados de futuros</a>, <a href="https://www.investopedia.com/decentralized-finance-defi-5113835">DeFi</a>.</span></li>
+							<li style="font-size: 80%;">Value of tokens can be pumped/dumped by players:
+								<ul>
+									<li>Pumping exacerbates <a style="font-size: 80%;" href="https://en.wikipedia.org/wiki/Fear_of_missing_out">Fear Of Missing Out (FOMO)</a></li>
+									<li>Dumping alows player to buy cheap <span style="font-size: 80%;">(<a href="https://theconversation.com/wall-street-isnt-just-a-casino-where-traders-can-bet-on-gamestop-and-other-stocks-its-essential-to-keeping-capitalism-from-crashing-154154">GameStop</a> & <a href="https://www.youtube.com/watch?v=kSqnwa3EQWA">YT Sorkin</a>)</span></li>
+								</ul>
+							</li>
+							<li>HODL?!?: <a style="font-size: 80%;" href="https://coinsutra.com/hodl-popular-cryptocurrency-terms/">popular cryptocurrency terms</a> <span style="font-size: 40%;">(Reddit, Twitter, Telegram, etc...)</span></li>
+							<li><a href="https://www.investopedia.com/terms/b/bull.asp">Bull</a> vs Bear markets:
+								<ul style="font-size: 80%;" >
+									<li>A bull market is a market that is on the rise and is economically sound.</li>
+									<li>A bear market is a market that is receding, where most stocks are declining in value.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Mundo Crypto: Mercado</h2>
+						<a href="https://cdn.howmuch.net/articles/top-10-growing-cryptocurrencies-2020-updated-47cf.jpg"><img style="width: 400px;" src="files/top-10-growing-cryptocurrencies-2020-updated.jpg"/></a><br/>
+						<p style="font-size: 60%;"><a href="https://howmuch.net/articles/top-10-growing-cryptocurrencies-2020">Original article from HowMuch.net, a financial literacy website</a></p>
+						<p style="font-size: 60%;">Above article is a snapshot. See <a href="https://coinmarketcap.com/">realtime updates at CoinMarketCap.</a></p>
+					</section>
+					<section data-background="files/top-10-growing-cryptocurrencies-2020-updated.jpg" data-background-size="contain">
+					</section>
+
+					<section>
+						<h2>Blockchains</h2>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<li><a href="https://btc.com/">Bitcoin</a></li>
+							<li><a href="https://etherscan.io/">Ethereum</a></li>
+							<li><a href="https://explorer.rsk.co/">RSK</a></li>
+							<li><a href="https://www.hyperledger.org/use/fabric">Hyperledger Fabric</a></li>
+							<li><a href="https://ripple.com/">Ripple</a> <span style="font-size: 60%;">(XRP payment protocol)</span></li>
+							<li><a href="https://litecoin.org/">Litecoin</a></li>
+							<li><a href="https://bfa.ar">BFA</a> <span style="font-size: 60%;">(Blockchain Federal Argentina)</span></li>
+						</ul>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<li><a href="https://eos.io/">EOS</a></li>
+							<li><a href="https://blockscout.com/etc/mainnet/">Ethereum Classic</a></li>
+							<li><a href="https://z.cash/">Zcash</a> <span style="font-size: 60%;">(red usada para Darknet, MUY anonima)</span></li>
+							<li><a href="https://ww.getmonero.org/">Monero (XMR)</a> <span style="font-size: 60%;">(también anónima)</span></li>
+							<li><a href="https://www.algorand.com/">AlgoRand</a></li>
+							<li><a href="https://aeternity.com/">AEternity</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Volatilidad</h2>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<a href="files/Bitcoin_Crashes_1.png"><img src="files/Bitcoin_Crashes_1.png"/></a>
+							<a href="files/Bitcoin_Crashes_3.png"><img src="files/Bitcoin_Crashes_3.png"/></a>
+						</ul>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<a href="files/Bitcoin_Crashes_2.png"><img src="files/Bitcoin_Crashes_2.png"/></a>
+							<p style="font-size: 50%;"><a href="https://howmuch.net/articles/bitcoin-all-major-crashes">Articulo HowMuch</a> y <a href="https://www.tradingview.com/chart/">gráfico en tiempo real</a> (elegir BTCUSD).</p>
+						</ul>
+					</section>
+					<section>
+						<h2>Stable Coins</h2>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<p>
+								<img src="files/Stablecoins.jpg"/>
+							</p>
+						</ul>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<p><a href="https://coinmarketcap.com/currencies/tether/">USDt</a> <span style="font-size: 75%;">(by <a href="https://tether.to/">tether</a>)</span></p>
+							<p><a href="https://coinmarketcap.com/currencies/trueusd/">TUSD</a> <span style="font-size: 75%;">(by <a href="https://www.trueusd.com/">TrueUSD</a>)</span></p>
+							<p><a href="https://coinmarketcap.com/currencies/dai/">DAI</a> <span style="font-size: 75%;">(by <a href="https://makerdao.com/en/">MakerDAO</a>)</span></p>
+							<p><a href="https://moneyonchain.com/doc-bitcoin-stablecoin/">DOC</a> <span style="font-size: 75%;">(by <a href="https://moneyonchain.com/">MoC</a> <span style="font-size: 60%;">and <a href="https://api.moneyonchain.com/docs/guide">their API</a></span>)</span></p>
+							<p><a href="https://coinmarketcap.com/currencies/usd-coin/">USDC</a> <span style="font-size: 75%;">(by <a href="https://www.coinbase.com/usdc">coinbase</a>)</span></p>
+							<p><a href="https://coinmarketcap.com/currencies/usd-coin/">BUSD</a> <span style="font-size: 75%;">(by <a href="https://www.binance.com/en/busd">binance</a>)</span></p>
+						</ul>
+					</section>
+				</section>
+				<section data-background="#FFDB77">
+					<section>
+						<h1>¿Futuro?</h1>
+					</section>
+					<section>
+						<h2>Nuevos Servicios</h2>
+						<ul>
+							<li><a href="https://ipfs.io/">InterPlanetary File System (IPFS)</a></li>
+							<li><a href="https://medium.com/swlh/supply-chain-blockchain-revolutionize-c6e77aaee043">Supply Chain</a> (HyperLedger)</li>
+							<li>Voting & Democracy</li>
+							<li>Notarios (<a href="https://www.proofofexistence.com/">Proof-Of-Existence</a>, <a href="https://bfa.ar/bfa/infraestructura">BFA</a>, etc...)</li>
+							<li><a href="https://blog.coinfabrik.com/censorship-of-harmful-data-in-blockchains/">Libertad de expresión</a> y <a href="https://blog.coinfabrik.com/immutability-is-there-a-limit/">derecho al olvido</a>.</li>
+							<li>Decentralized:
+								<ul style="font-size: 60%;">
+									<li>Exchanges <span style="font-size: 60%;">(hoy <a href="https://defiprime.com/exchanges">ya existen</a> pero hay limites, lo más innovador fue el <a href="">Atomic Swap</a>)</span></li>
+									<li>Market / Marketplace <span style="font-size: 60%;">(aka Amazon. MLibre, AppStore, etc...)</span></li>
+									<li><a href="https://kleros.io/en/">Courts</a></li>
+									<li>Finance (DeFi) <span style="font-size: 60%;">which requires oracles (<a href="https://chain.link/solutions">Chainlink</a>, <a href="https://provable.xyz/">Provable</a>, <a href="https://info.uniswap.org/">Uniswap v2</a>, <a href="https://developers.rsk.co/solutions/oraclemoneyonchain/">OMoC</a>, etc...)</span></li>
+									<li>Betting/Gambling</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Ethereum 2.0</h2>
+						<ul>
+							<li>Based on PoA</li>
+							<li>Eth has 30 tx/sec, Eth2 up to 100k tx/sec</li>
+							<li>Minimum of 16,384 validators each staking 32 ETH</li>
+						</ul>
+						<p style="font-size: 60%;"><a href="https://decrypt.co/resources/what-is-ethereum-2-0">Article describing ETH2</a> & <a href="https://beaconcha.in/">Explorer</a></p>
+					</section>
+					<section>
+						<h4>Para seguir aprendiendo...</h4>
+						<p><a href="http://bitcoinbook.cs.princeton.edu/">Princeton bitcoin book and online course</a></p>
+						<p>Infografias buenas...</p>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<a href="https://bitsonblocks.net/wp-content/uploads/2015/09/bitcoin_blockchain_infographic1.pdf"><img src="files/bitsonblocks_inside-bitcoins-blockchain.jpg"/></a>
+						</ul>
+						<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+							<a href="http://veenspace.com/assets/ethMEW.svg"><img src="files/veenspace-ethereum_start-here.jpg"/></a>
+						</ul>
+						<br/>
+						<p style="font-size: 50%; text-align: left; padding-left: 150px;">Buenos articulos:</p>
+						<ul style="font-size: 40%;">
+							<li><a href="https://bitsonblocks.net/2015/09/01/gentle-introduction-bitcoin/">Gentle introduction bitcoin</a></li>
+							<li><a href="https://bitsonblocks.net/2015/09/14/inside-bitcoins-blockchain/">Inside bitcoins blockchain (articulo de la 1er imagen)</a></li>
+							<li><a href="https://bitsonblocks.net/2016/03/14/bitcoins-network-in-one-infographic/">Bitcoin network in oneinfographic</a></li>
+							<li><a href="http://veenspace.com/ethereum">Ethereum: A Visual Explanation (articulo de la 2da imagen)</a></li>
+						</ul>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Remote !-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<!-- Usando https://cdnjs.com/libraries/reveal.js/4.1.0 !-->
+
+		<!-- Local
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		!-->
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+
+	</body>
+</html>
