@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>How to survive codeReviews</title>
+
+		<!-- Remote !-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
+
+		<!-- Local
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		!-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="#C6F3C9">
+					<section>
+						<h2>How to survive</h2>
+						<h1>code Reviews</h1>
+					</section>
+					<section>
+						<h3>Positive aspects</h3>
+						<ul>
+							<li>Get help to improve your code in matter of performance and design.</li>
+							<li>Improve the readibility of the code.</li>
+							<li>Knowledge sharing.</li>
+							<li>Early Design Feedback.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Negative impact</h3>
+						<ul>
+							<li>Delay deploys.</li>
+							<li>Slow the code evolution.</li>
+							<li>Fall into <a href="https://blogs.oracle.com/javamagazine/post/five-code-review-antipatterns">Anti-patterns</a>.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>How we do it (I)</h3>
+						<p>Are we harder on other's people code?</p>
+						<p><b>YES!</b></p>
+						<p>But are we harder than we would be on <br/>our code 6 months after writing it?</p>
+						<p><i>Maybe not?</i></p>
+					</section>
+					<section>
+						<h3>How we do it (II)</h3>
+						<p>Writing and reading code requires different mindsets:</p>
+						<ul>
+							<li>When we write code we are looking to achieve and objective.</li>
+							<li>When we read code the work is done, we are just looking for ways to improve it. Plus, we don't need to do the work, so the sky is the limit.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>What you should be looking for?</h3>
+						<ul>
+							<li>Depends on your team/company <br/>Code Review policies and processes.</li>
+							<li>If it is not written, you could assume <br/>from context and share your view.</li>
+							<li>It is really important to know/agree on this <br/>to avoid frustration and overwork.</li>
+						</ul>
+						<br/><br/>
+						<p style="font-size: 60%;">Note: In <a href="https://ieeexplore.ieee.org/abstract/document/8668024">Confusion in Code Reviews</a> paper you can read more <br/>about the negative impact of not knowing.</p>
+					</section>
+					<section>
+						<h3>Traditional getaway code review</h3>
+						<ul style="font-size: 75%;">
+							<li>Small amount of code.</li>
+							<li>Add information for the code reviewer <span style="font-size: 60%;">(why you did things the way you did)</span></li>
+							<li>Respond in a timely fashion.</li>
+							<li>Checklist of what to look for <span style="font-size: 60%;">(I'm not looking at the code until I find an error)</span></li>
+							<li>Write useful comments: Relevant, Actionables, Specific &amp; Constructive <span style="font-size: 60%;">(you can use the <a href="https://en.wikipedia.org/wiki/SMART_criteria">SMART criteria</a>)</span></li>
+							<li>Accept or Raise concerns that need to be solved.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>You want more?</h3>
+						<ul style="font-size: 75%;">
+							<li>Read Trisha Gee Code Review <a href="https://leanpub.com/whattolookforinacodereview">book</a> and <a href="https://blog.jetbrains.com/upsource/tag/code-review-workflows/">articles</a></li>
+							<li>You can read <a href="https://naist-se.github.io/code-review/publications/">papers on Code Review</a></li>
+							<li>More pointers to useful data: <a style="font-size: 75%;" href="https://dl.acm.org/doi/10.1145/3378936.3378954">Modern Code Review Benefits: Primary Findings of A Systematic Literature Review</a>.</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="#88B4B4">
+					<section>
+						<h3>Cuentos desde las trincheras</h3>
+						<p>Integrantes:
+							<ul>
+								<li>Matias Miranda</li>
+								<li>Diego Sabolo</li>
+								<li>Manuel Santibañez</li>
+								<li>Kendall Sanchez</li>
+							</ul>
+						</p>
+						<br/>
+						<p style="font-size: 75%;">AKA: <a href="https://www.youtube.com/watch?v=vjh3uMYvzQQ&t=669s">Yo era otro infeliz...</a><br/><span style="font-size: 50%;"><i>(Les Luthiers: El Sendero de Warren Sánchez)</i></span></p>
+					</section>
+					<section>
+						<h3>Confesionario</h3>
+						<h2>Yo también sufrí los Anti-patterns</h2>
+					</section>
+					<section>
+						<h3>Anti-patterns</h3>
+						<h2>Nitpicking</h2>
+						<span style="font-size: 75%;">
+							<p>Formatting, obvious security mistakes, method size, add unit test, etc...</p>
+							<p>Best to use <strong>automated tools to detect</strong> and if something leaks through only comment on it. Drupal wise we have a <a href="https://www.drupal.org/docs/develop/standards">Coding standards</a> which ideally we should follow.</p>
+						</span>
+					</section>
+					<section>
+						<h3>Anti-patterns</h3>
+						<h2>Design changes when the code works</h2>
+						<span style="font-size: 75%;">
+							<p>This needs to be attacked earlier, not at the time of delivery. If you think this is needed, it becomes a comment and there is a </p>
+						</span>
+					</section>
+					<section>
+						<h3>Anti-patterns</h3>
+						<h2>Incosistent Feedback</h2>
+						<p>Again this becomes an opinion. Refrain from it to avoid blocking and make it be a comment.</p>
+					</section>
+					<section>
+						<h3>Anti-patterns</h3>
+						<h2>The Ghost reviewer</h2>
+						<p>When you "commit" to do a review, but never get around to do it. So the code is in a wait state, and doesn't get delivered.</p>
+					</section>
+					<section>
+						<h3>Anti-patterns</h3>
+						<h2>Ping-pong review</h2>
+						<p>Instead of giving me all at once, with each delivery you have a new opinion.</p>
+					</section>
+					<section>
+						<h3>Anti-patterns</h3>
+						<h2>More?</h2>
+						<p>Yes, there are many. You can <a href="https://blogs.oracle.com/javamagazine/post/five-code-review-antipatterns">read more about the presented here</a> or look for more at <a href="https://ieeexplore.ieee.org/document/9425884">Anti-patterns in Modern Code Review</a> IEEE paper.</p>
+					</section>
+					<section>
+						<h2>Code Review Workflows</h2>
+						<ul>
+							<li>Early Design Feedback</li>
+							<li>Knowledge sharing</li>
+							<li>Gateway code review</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="#F0C87F">
+					<section>
+						<h2>Lets make fun <br/>about it...</h2>
+					</section>
+					<section>
+						<h3>The Ghost reviewer</h3>
+						<img src="files/CodeReview_StillWaitingACodeReview.jpg"/>
+					</section>
+					<section>
+						<h3>Make Annotations</h3>
+						<img style="width: 500px;" src="files/CodeReview_Annotations.jpeg"/>
+					</section>
+					<section>
+						<h3>Nitpicking</h3>
+						<img style="width: 500px;" src="files/CodeReview_CouldBeBetter.jpg"/>
+					</section>
+					<section>
+						<h3>Not using a checklist...</h3>
+						<img style="width: 500px;" src="files/CodeReview_NoChecklist.jpg"/>
+					</section>
+					<section>
+						<h3>Security Checks</h3>
+						<img style="width: 500px;" src="files/CodeReview_LackOfSecurity.jpg"/>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<!-- Remote !-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+		<!-- Usando https://cdnjs.com/libraries/reveal.js/4.3.1 !-->
+
+		<!-- Local
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		!-->
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+
+	</body>
+</html>
