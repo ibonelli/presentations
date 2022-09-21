@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Backend to frontend path</title>
+
+		<!-- Remote !-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
+
+		<!-- Local
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		!-->
+
+		<!-- Best way to run/edit locally
+			<code>
+				npm install reload -g
+				reload -b
+			</code>
+		!-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="#C6F3C9">
+					<section>
+						<h1>Backend to<br/>frontend</h1>
+					</section>
+					<section>
+						<h3>Why to do it?</h3>
+						<ul>
+							<li>As time progress being full-stack is the way to go for backend developers.</li>
+							<li>Gives you added flexibility when team has cross-concerns or needs.</li>
+							<li>It is more and more a developers world and standarization has improved drammatically.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Cómo integrar el frontend con el backend</h3>
+						<ul>
+							<li>Quién lo va a usar</li>
+							<li>Ofrecerles la mejor experiencia posible</li>
+							<li>Deben aprender de <a href="https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design">UX/UI design y usabilidad</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Bases HTML y CSS</h3>
+						<ul>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Html 5 markup/semantic HTML</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS basics</a>: Box model, Inheritance, Selectors & Animations</li>
+							<li>Preprocessadores: <a href="https://sass-lang.com/guide">SASS</a>, LESS, stylus, PostCSS, etc...</li>
+							<li>CSS Frameworks: Bootstrap, Tailwind, Bulma, etc...</li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">Reglas de accesibilidad</a>.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>JavaScript</h3>
+						<p><a href="https://javascript.info/">JavaScript vanilla</a>, y cómo interactúa <br/>con los <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">API del browser y DOM</a>:
+							<ul>
+								<li>Event handlers</li>
+								<li>Event triggers</li>
+								<li>Browser APIs</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h3>Temas relacionados a ReactJS y JS</h3>
+						<ul>
+							<li>Cómo funciona un evento en JS</li>
+							<li>Cómo funciona el DOM</li>
+							<li>Que es el Virtual DOM</li>
+							<li>Cómo funciona herencia del DOM</li>
+							<li>Como son los events</li>
+							<li>Como crear un listener</li>
+							<li>Que es AJAX</li>
+						</ul>
+						<p><a style="font-size: 50%;" href="https://reactjs.org/community/courses.html">(community courses)</a></p>
+					</section>
+					<section>
+						<h3>ReactJS (I)</h3>
+						<ul>
+							<li>lifecycle</li>
+							<li>Que es un mounting point</li>
+							<li>Como es una single page application</li>
+							<li>Como hacer rutas (react router)</li>
+						</ul>
+						<p><a style="font-size: 50%;" href="https://www.habilelabs.io/react-journey-from-zero-to-hero/">React journey from zero to hero.</a></p>
+					</section>
+					<section>
+						<h3>ReactJS (II)</h3>
+						<ul>
+							<li>Configuración de WebPack</li>
+							<li>Como configurar esos recursos</li>
+							<li>Como hacer el bundle</li>
+							<li>Como llevas el aplicativo a producción</li>
+							<li>Como hacer testing</li>
+							<li>Como tener calidad de código</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Backend support</h3>
+						<ul>
+							<li><a href="https://www.howtographql.com/">GraphQL</a>: Esquemas & Queries</li>
+							<li>JSON APIs y otras...</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Que hace el frontend</h3>
+						<ul>
+							<li>Toma los datos del backend, y se los muestra al usuario final</li>
+							<li>Esto puede ser dentro del mismo framework (por ejemplo Twig Drupal rendering).</li>
+							<li>O desacoplado como cuando usamos:
+								<ul>
+									<li>En el backend REST APIs, JSON API o GraphQL.</li>
+									<li>Y en el frontend Angular, React, Vue.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>En el modelo desacoplado hay mucho de comunicación HTTP:</h3>
+						<ul>
+							<li><a href="">GET POST, UPDATE, PATCH & DELETE</a></li>
+							<li>Tipos respuestas: <a href="">2xx, 3xx, 5xx</a></li>
+							<li>Todo asíncrono y llamando a una API.</li>
+							<li>Gatsby también lo hace pero en el building time</li>
+							<li>NextJS: Pre-rendering, static generation (SSG) and server-side rendering (SSR)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Links</h3>
+						<ul>
+							<li>Ejercicio para poner en práctica todo esto: <a href="https://github.com/jmsv23/BE-to-FE-path">jmsv23/BE-to-FE-path</a>.</li>
+							<li><a href="https://generalassemb.ly/">General Assembly</a> course about <a href="https://github.com/Milisant/fundamentals/blob/master/SUMMARY.md">foundational skills in HTML, CSS and Javascript</a>.</li>
+						</ul>
+				</section>
+			</div>
+
+		</div>
+
+		<!-- Remote !-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+		<!-- Usando https://cdnjs.com/libraries/reveal.js/4.3.1 !-->
+
+		<!-- Local
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		!-->
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+
+	</body>
+</html>
