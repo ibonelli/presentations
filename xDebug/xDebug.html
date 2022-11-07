@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Backend to frontend path</title>
+
+		<!-- Remote !-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
+
+		<!-- Local
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		!-->
+
+		<!-- Best way to run/edit locally
+			<code>
+				npm install reload -g
+				reload -b
+			</code>
+		!-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="#C6F3C9">
+					<section>
+						<h2>Why xDebug?</h2>
+						<ul style="font-size: 70%;">
+							<li><code>die();</code></li>
+							<li><code>kint($data1, $data2, $data3, ...); 
+kint_trace();</code></li>
+							<li><code>{{ dump() }}</code></li>
+							<li>
+								<code>\Drupal::logger('my_module')->notice($message);
+\Drupal::logger('my_module')->error($message);</code>
+							</li>
+							<li>
+								<code>\Drupal::messenger()->addStatus(t('Successful message.'));
+\Drupal::messenger()->addWarning(t('Warning message.'));
+\Drupal::messenger()->addError(t('Error message.'));</code>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="col" style="width: 160px; display: inline-block; vertical-align: top;">
+							<h3><br/><br/>What's xDebug?</h3>
+						</ul>
+						<ul class="col" style="width: 550px; display: inline-block; vertical-align: top;">
+							<a href="files/xDebug_vsCode.png"><img src="files/xDebug_vsCode.png"/></a>
+						</ul>
+					</section>
+					<section>
+						<h2>How to xDebug?</h2>
+						<h3>MacOS, phpStorm & Docksal</h3>
+						<ul>
+							<li><a href="https://docs.docksal.io/tools/xdebug/#phpstorm">Docksal working with vsCode</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>How to xDebug</h2>
+						<h3>Linux, vsCode & Docksal</h3>
+						<ul>
+							<li><a href="https://docs.docksal.io/tools/xdebug/#vscode">Docksal working with vsCode.</a></li>
+							<li><a href="https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug">vsCode xDebug extension</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>How use debug JS?</h2>
+						<h3>vsCode, Chrome & Docksal</h3>
+						<ul>
+							<li><a href="https://code.visualstudio.com/docs/editor/debugging">Debugging in vsCode</a></li>
+							<li><a href="https://marketplace.visualstudio.com/search?target=vscode&category=Debuggers&sortBy=Installs">vsCode debugging extensions (NodeJS, Python, etc...)</a></li>
+							<li>Funciona para debug de JavaScript en cualquier lado, incluso dentro de Drupal.</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<!-- Remote !-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+		<!-- Usando https://cdnjs.com/libraries/reveal.js/4.3.1 !-->
+
+		<!-- Local
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		!-->
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+
+	</body>
+</html>
