@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Using xDebug</title>
+		<title>Using Xdebug</title>
 
 		<!-- Remote !-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
@@ -32,7 +32,7 @@
 			<div class="slides">
 				<section data-background="#C6F3C9">
 					<section>
-						<h2>Why xDebug?</h2>
+						<h2>Why Xdebug?</h2>
 						<ul style="font-size: 70%;">
 							<li><code>die();</code></li>
 							<li><code>kint($data1, $data2, $data3, ...); 
@@ -50,36 +50,71 @@ kint_trace();</code></li>
 						</ul>
 					</section>
 					<section>
+						<h3>Debuggers</h3>
+						<img src="files/vsCode_Debugger.png"/>
+					</section>
+					<section>
+						<h3>Links...</h3>
+						<ul>
+							<li><a href="https://code.visualstudio.com/docs/editor/debugging">Debugging with vsCode</a></li>
+							<li><a href="https://marketplace.visualstudio.com/items?itemName=Xdebug.php-debug">vsCode PHP Xdebug extension</a></li>
+							<li><a href="https://docs.docksal.io/tools/xdebug/#vscode">Docksal Xdebug vsCode documentation</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Breakpoints</h3>
+						<div class="r-stack">
+							<span class="fragment fade-in-then-out"><a href="files/Breakpoint1.png"><img src="files/Breakpoint1.png"/></a></span>
+							<span class="fragment fade-in-then-out"><a href="files/Breakpoint2.png"><img src="files/Breakpoint2.png"/></a></span>
+						</div>
+					</section>
+					<section>
+						<h3>Variables</h3>
+						<div class="r-stack">
+							<span class="fragment fade-in-then-out"><a href="files/Twig_Variables.png"><img src="files/Twig_Variables.png"/></a></span>
+							<span class="fragment fade-in-then-out"><a href="files/Twig_Breakpoint.png"><img src="files/Twig_Breakpoint.png"/></a></span>
+						</div>
+					</section>
+					<section>
+						<h2>How to Debug...</h2>
+						<img src="files/vsCode_Xdebug_toolBar.png"/>
+						<br/>
+						<img src="files/Debugger_Buttons_Explained.png"/>
+					</section>
+					<section>
 						<ul class="col" style="width: 160px; display: inline-block; vertical-align: top;">
-							<h3><br/><br/>What's xDebug?</h3>
+							<h3><br/><br/>What's Xdebug?</h3>
 						</ul>
 						<ul class="col" style="width: 550px; display: inline-block; vertical-align: top;">
-							<a href="files/xDebug_vsCode.png"><img src="files/xDebug_vsCode.png"/></a>
+							<a href="files/Xdebug_vsCode.png"><img src="files/Xdebug_vsCode.png"/></a>
 						</ul>
 					</section>
 					<section>
-						<h2>How to xDebug?</h2>
-						<h3>MacOS, phpStorm & Docksal</h3>
+						<h2>How to Xdebug macOS</h2>
+						<p>(por Matías Miranda)</p>
+						<h3>macOS, phpStorm & Docksal</h3>
 						<ul>
-							<li><a href="https://docs.docksal.io/tools/xdebug/#phpstorm">Docksal working with vsCode</a></li>
+							<li><a href="https://docs.docksal.io/tools/Xdebug/#phpstorm">Docksal working with vsCode</a></li>
 						</ul>
 					</section>
 					<section>
-						<h2>How to xDebug</h2>
+						<h2>How to Xdebug Linux</h2>
+						<p>(por Ignacio Bonelli)</p>
 						<h3>Linux, vsCode & Docksal</h3>
 						<ul>
-							<li><a href="https://docs.docksal.io/tools/xdebug/#vscode">Docksal working with vsCode.</a></li>
-							<li><a href="https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug">vsCode xDebug extension</a></li>
+							<li><a href="https://docs.docksal.io/tools/Xdebug/#vscode">Docksal working with vsCode.</a></li>
+							<li><a href="https://marketplace.visualstudio.com/items?itemName=Xdebug.php-debug">vsCode Xdebug extension</a></li>
 						</ul>
 					</section>
 					<section>
 						<h2>How use debug JS?</h2>
+						<p>(por Matías Vessuri)</p>
 						<h3>vsCode, Chrome & Docksal</h3>
 						<ul>
 							<li><a href="https://code.visualstudio.com/docs/editor/debugging">Debugging in vsCode</a></li>
 							<li><a href="https://marketplace.visualstudio.com/search?target=vscode&category=Debuggers&sortBy=Installs">vsCode debugging extensions (NodeJS, Python, etc...)</a></li>
-							<li>Funciona para debug de JavaScript en cualquier lado, incluso dentro de Drupal.</li>
 						</ul>
+						<p>Funciona para debug de JavaScript en cualquier lado, incluso dentro de Drupal.</p>
 					</section>
 				</section>
 			</div>
