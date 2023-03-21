@@ -32,6 +32,9 @@
 			<div class="slides">
 				<section data-background="#C6F3C9">
 					<section>
+						<h1>Using Xdebug<br/>for Drupal</h1>
+					</section>
+					<section>
 						<h2>Why Xdebug?</h2>
 						<ul style="font-size: 70%;">
 							<li><code>die();</code></li>
@@ -48,6 +51,10 @@ kint_trace();</code></li>
 \Drupal::messenger()->addError(t('Error message.'));</code>
 							</li>
 						</ul>
+					</section>
+					<section>
+						<h2>Why Xdebug?</h2>
+						<a href="files/why_xdebug.png"><img src="files/why_xdebug.png"/></a>
 					</section>
 					<section>
 						<h3>Debuggers</h3>
@@ -83,10 +90,28 @@ kint_trace();</code></li>
 					</section>
 					<section>
 						<ul class="col" style="width: 160px; display: inline-block; vertical-align: top;">
-							<h3><br/><br/>What's Xdebug?</h3>
+							<br/><br/>
+							<h3>What's Xdebug?</h3>
+							<p style="font-size: 60%;">PHP extension<br/>(written in C)</p>
 						</ul>
 						<ul class="col" style="width: 550px; display: inline-block; vertical-align: top;">
 							<a href="files/Xdebug_vsCode.png"><img src="files/Xdebug_vsCode.png"/></a>
+						</ul>
+					</section>
+					<section>
+						<h2>How to Xdebug Linux</h2>
+						<p>(por Ignacio Bonelli)</p>
+						<h3>Linux, vsCode & Docksal</h3>
+						<ul>
+							<li><a href="https://docs.docksal.io/tools/Xdebug/#vscode">Docksal working with vsCode.</a></li>
+							<li><a href="https://marketplace.visualstudio.com/items?itemName=Xdebug.php-debug">vsCode Xdebug extension</a></li>
+							<br/>
+							<li style="font-size: 60%;">Prior debug talks:
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=BTx1m7YxeJU&t=306s">Debug me: Drupal Camp Costa Rica (weKnow/Tiana)</a></li>
+									<li><a href="https://www.youtube.com/watch?v=XAu173PdN7s">Debugging Drupal with Xdebug: DrupalCon Portland 2022 (</a></li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 					<section>
@@ -98,19 +123,11 @@ kint_trace();</code></li>
 						</ul>
 					</section>
 					<section>
-						<h2>How to Xdebug Linux</h2>
-						<p>(por Ignacio Bonelli)</p>
-						<h3>Linux, vsCode & Docksal</h3>
-						<ul>
-							<li><a href="https://docs.docksal.io/tools/Xdebug/#vscode">Docksal working with vsCode.</a></li>
-							<li><a href="https://marketplace.visualstudio.com/items?itemName=Xdebug.php-debug">vsCode Xdebug extension</a></li>
-						</ul>
-					</section>
-					<section>
 						<h2>How use debug JS?</h2>
 						<p>(por Matías Vessuri)</p>
 						<h3>vsCode, Chrome & Docksal</h3>
 						<ul>
+							<li><a href="https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code">Introducing Chrome Debugging for VS Code</a></li>
 							<li><a href="https://code.visualstudio.com/docs/editor/debugging">Debugging in vsCode</a></li>
 							<li><a href="https://marketplace.visualstudio.com/search?target=vscode&category=Debuggers&sortBy=Installs">vsCode debugging extensions (NodeJS, Python, etc...)</a></li>
 						</ul>
