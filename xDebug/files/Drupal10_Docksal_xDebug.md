@@ -1,7 +1,6 @@
 # Drupal 10
 
-## Install (w/Docksal)
-	(also in <Nextcloud>/weKnow/Technology/DockSal.md)
+## Install locally (with Docksal)
 
 ```
 git clone https://github.com/docksal/boilerplate-drupal10-composer drupal10-s1
