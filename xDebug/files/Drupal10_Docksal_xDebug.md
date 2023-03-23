@@ -35,6 +35,7 @@ fin composer require drupal/devel ; fin drush en devel
 fin config set --env=local XDEBUG_ENABLED=1
 fin project restart
 fin exec php -v | grep -i xdebug
+fin exec php -i | grep xdebug.client_port
 ```
 
 After starting the debug session in vsCode:
