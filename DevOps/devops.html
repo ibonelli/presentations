@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>DevOps</title>
+
+		<meta name="description" content="A general idea of what this position involves.">
+		<meta name="author" content="Ignacio Javier Bonelli">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Remote
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
+		!-->
+		<!-- Local !-->
+		<link rel="stylesheet" href="./dist/reset.min.css">
+		<link rel="stylesheet" href="./dist/reveal.min.css">
+		<link rel="stylesheet" href="./dist/black.min.css" id="theme">
+		<link rel="stylesheet" href="./dist/monokai.min.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>DevOps</h3>
+					<ol>
+						<li>Sysadmin</li>
+						<li>DevOps</li>
+						<li>SRE (Systems Reliability Engineer)</li>
+					</ol>
+					<ul>
+						<li>The Transformation from Sysadmin to DevOps: <a href="https://www.linkedin.com/pulse/transformation-from-sysadmin-devops-part1-nitheesh-poojary">part1</a> & <a href="https://www.linkedin.com/pulse/transformation-from-sysadmin-devops-part-2-version-control-poojary?trk=article-ssr-frontend-pulse_more-articles_related-content-card">part2</a></li>
+						<li><a href="https://www.redhat.com/sysadmin/sysadmin-devops">From sysadmin to DevOps</a></li>
+						<li><a href="https://www.reddit.com/r/devops/comments/8mj0tv/my_experience_going_from_sysadmin_to_devops/">My experience going from sysadmin to devops</a></li>
+						<li>Which leads to... <a href="https://sre.google/sre-book/eliminating-toil/">DevOps/SRE isn't really about architecture. It's more about eliminating "Toil"</a>.</li>
+						<li>Which leads to... <a href="https://sre.google/sre-book/part-I-introduction/">SRE Google's book</a>.</li>
+						<li>Book: <a href="https://www.oreilly.com/library/view/modern-system-administration/9781492055204/">Modern System Administration</a> by Jennifer Davis (Nov 2022, O'Reilly)</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>Topics</h3>
+						<ul>
+							<li>Hosting: Digital Ocean, Linode, AWS, GCS, Azure, Heroku, ...</li>
+							<li>Hosting services: Acquia, Pantheon, Platform...</li>
+							<li>Networking: Load balancers, Private Virtual Networks, VPNs, letsEncrypt, etc...</li>
+							<li>Caching Services: CloudFlare, Netlify, CDNs, etc...</li>
+							<li>Docksal, Lando, others...</li>
+							<li>Docker: Inner workings</li>
+							<li>Scripting: Bash, Python, YML now... (also Orchestration like Ansible, terraform, in some way Kubernetes, etc...)</li>
+							<li>Before Jenkins (SW) & SAAS: CircleCI, Github Actions, GitlabCI, Bitbucket pipelines, etc...</li>
+							<li>Monitoring: Nagios y sus seguidores. NewRelic, Prometheus, Grafana, others...</li>
+							<li>More?</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Hosting: What we can use today</h3>
+						<ul>
+							<li>On-Prem</li>
+							<li>Cloud Computing:
+								<ul>
+									<li>Virtual Machines</li>
+									<li>Containers</li>
+									<li>Serverless</li>
+								</ul>
+								<p>Guidelines for Choosing Compute</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Storage</h3>
+						<ul>Categories:
+							<li>Block Storage</li>
+							<li>File Storage</li>
+							<li>Object Storage</li>
+							<li>Database Storage</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Network</h3>
+					</section>
+					<section>
+						<h3>Programming Languages</h3>
+					</section>
+					<section>
+						<h3>Security</h3>
+					</section>
+					<section>
+						<h3>Monitoring</h3>
+					</section>
+					<section>
+						<h3>Scaling & Capacity Management</h3>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<!-- Remote
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/zoom/zoom.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/search/search.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+		!-->
+
+		<!-- Local !-->
+		<script src="./dist/reveal.min.js"></script>
+		<script src="./dist/zoom.min.js"></script>
+		<script src="./dist/notes.min.js"></script>
+		<script src="./dist/search.min.js"></script>
+		<script src="./dist/markdown.min.js"></script>
+		<script src="./dist/highlight.min.js"></script>
+
+		<script>
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html> 
