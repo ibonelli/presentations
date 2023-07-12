@@ -20,10 +20,10 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
 		!-->
 		<!-- Local !-->
-		<link rel="stylesheet" href="./dist/reset.min.css">
-		<link rel="stylesheet" href="./dist/reveal.min.css">
-		<link rel="stylesheet" href="./dist/black.min.css" id="theme">
-		<link rel="stylesheet" href="./dist/monokai.min.css">
+		<link rel="stylesheet" href="../dist/reset.min.css">
+		<link rel="stylesheet" href="../dist/reveal.min.css">
+		<link rel="stylesheet" href="../dist/black.min.css" id="theme">
+		<link rel="stylesheet" href="../dist/monokai.min.css">
 	</head>
 
 	<body>
@@ -31,37 +31,51 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>DevOps</h3>
-					<ol>
-						<li>Sysadmin</li>
-						<li>DevOps</li>
-						<li>SRE (Systems Reliability Engineer)</li>
-					</ol>
+					<section>
+						<h3>¿DevOps?</h3>
+						<ol>
+							<li>Sysadmin: Systems Administrator</li>
+							<li>DevOps: You build it, you run it.</li>
+							<li>SRE: Systems Reliability Engineer</li>
+							<li>Platform Engineering: <a href="https://thenewstack.io/devops-is-dead-embrace-platform-engineering/">DevOps Is Dead...</a></li>
+						</ol>
+						<br/><br/>
+						<p style="font-size: 60%;">And yet something new... Why?!? DevOps primary consequence<br/>is the increasing cognitive load put on developers.</p>
+					</section>
+					<section>
+						<h3>Are they really different?</h3>
+						<h4>Primary goals...</h4>
+						<ul>
+							<li>DevOps: Optimize the development process.</li>
+							<li>SRE: Maximum application reliability.</li>
+							<li>Platform Engineering: Optimize the speed and efficiency of software delivery operations.</a></li>
+						</ul>
+						<br/><br/>
+						<p style="font-size: 60%;">Article: <a href="https://www.xenonstack.com/insights/platform-engineering-vs-devops-vs-sre">How is Platform Engineering Different from DevOps and SRE?</a></p>
+					</section>
+					<section>
+						<h3>Syadmin, DevOps or SRE?</h3>
+						<h4>Let's call it: Modern System Administration</h4>
+						<ul>
+							<li>SRE Google's view <a href="https://sre.google/resources/practices-and-processes/enterprise-roadmap-to-sre/">Book & site</a></li>
+							<li><a href="https://www.oreilly.com/library/view/modern-system-administration/9781492055204/">Modern System Administration</a> <span style="font-size: 50%;">by Jennifer Davis, Nov 2022, O'Reilly</span></li>
+						</ul>
+					</section>
+				</section>
+					<section>
+					<h3>Topics</h3>
 					<ul>
-						<li>The Transformation from Sysadmin to DevOps: <a href="https://www.linkedin.com/pulse/transformation-from-sysadmin-devops-part1-nitheesh-poojary">part1</a> & <a href="https://www.linkedin.com/pulse/transformation-from-sysadmin-devops-part-2-version-control-poojary?trk=article-ssr-frontend-pulse_more-articles_related-content-card">part2</a></li>
-						<li><a href="https://www.redhat.com/sysadmin/sysadmin-devops">From sysadmin to DevOps</a></li>
-						<li><a href="https://www.reddit.com/r/devops/comments/8mj0tv/my_experience_going_from_sysadmin_to_devops/">My experience going from sysadmin to devops</a></li>
-						<li>Which leads to... <a href="https://sre.google/sre-book/eliminating-toil/">DevOps/SRE isn't really about architecture. It's more about eliminating "Toil"</a>.</li>
-						<li>Which leads to... <a href="https://sre.google/sre-book/part-I-introduction/">SRE Google's book</a>.</li>
-						<li>Book: <a href="https://www.oreilly.com/library/view/modern-system-administration/9781492055204/">Modern System Administration</a> by Jennifer Davis (Nov 2022, O'Reilly)</li>
+						<li>Hosting: <span style="font-size: 70%;">Digital Ocean, Linode, AWS, GCS, Azure, Heroku, ...</span></li>
+						<li>Hosting services: <span style="font-size: 70%;">Acquia, Pantheon, Platform...</span></li>
+						<li>Networking: <span style="font-size: 70%;">Load balancers, VPNs, letsEncrypt, etc...</span></li>
+						<li>Caching Services: <span style="font-size: 70%;">CloudFlare, Netlify, CDNs, etc...</span></li>
+						<li>Local Envs & Docker: <span style="font-size: 70%;">Docksal, Lando, DDEV, others...</span></li>
+						<li>Languages: <span style="font-size: 70%;">Bash, Python, YML, Ansible, terraform, etc...</span></li>
+						<li>DevOps: <span style="font-size: 70%;">CircleCI, Github Actions, GitlabCI, Bitbucket pipelines, Jenkins, etc...</span></li>
+						<li>Monitoring: <span style="font-size: 70%;">CloudWatch, NewRelic, Prometheus, Grafana, others...</span></li>
 					</ul>
 				</section>
 				<section>
-					<section>
-						<h3>Topics</h3>
-						<ul>
-							<li>Hosting: Digital Ocean, Linode, AWS, GCS, Azure, Heroku, ...</li>
-							<li>Hosting services: Acquia, Pantheon, Platform...</li>
-							<li>Networking: Load balancers, Private Virtual Networks, VPNs, letsEncrypt, etc...</li>
-							<li>Caching Services: CloudFlare, Netlify, CDNs, etc...</li>
-							<li>Docksal, Lando, others...</li>
-							<li>Docker: Inner workings</li>
-							<li>Scripting: Bash, Python, YML now... (also Orchestration like Ansible, terraform, in some way Kubernetes, etc...)</li>
-							<li>Before Jenkins (SW) & SAAS: CircleCI, Github Actions, GitlabCI, Bitbucket pipelines, etc...</li>
-							<li>Monitoring: Nagios y sus seguidores. NewRelic, Prometheus, Grafana, others...</li>
-							<li>More?</li>
-						</ul>
-					</section>
 					<section>
 						<h3>Hosting: What we can use today</h3>
 						<ul>
@@ -72,33 +86,224 @@
 									<li>Containers</li>
 									<li>Serverless</li>
 								</ul>
-								<p>Guidelines for Choosing Compute</p>
 							</li>
 						</ul>
+						<p>What should you choose?</p>
 					</section>
 					<section>
-						<h3>Storage</h3>
-						<ul>Categories:
-							<li>Block Storage</li>
-							<li>File Storage</li>
-							<li>Object Storage</li>
-							<li>Database Storage</li>
+						<h4>Cloud Computing Mayor Players</h4>
+						<a href="files/cloud_providers.jpg"><img style="width: 500px;" src="files/cloud_providers.jpg"/></a>
+						<br/>
+						<p style="font-size: 70%;"><span style="font-size: 70%;">"minor" players: </span><a href="https://www.digitalocean.com/pricing">DO</a>, <a href="https://www.linode.com/pricing/#compute-shared">Linode</a>, <a href="https://www.vultr.com/pricing/">Vultr</a></p>
+					</section>
+					<section>
+						<h4>Cloud Services</h4>
+						<a href="files/AWS-vs-Azure-vs-GCP.jpg"><img style="width: 800px;" src="files/AWS-vs-Azure-vs-GCP.jpg"/></a>
+					</section>
+					<section>
+						<h3>Scaling Up vs Out</h3>
+						<a href="files/ScaleUp_vs_ScaleOut.png"><img src="files/ScaleUp_vs_ScaleOut.png"/></a>
+					</section>
+					<!-- <section>
+						<p style="text-align: left;">Scaling & Capacity Management:</p>
+						<ul>
+							<li>Minimum & maximun number of VMs</li>
+							<li>Scale out & in CPU threshold</li>
+							<li>Number of VMs to increase/decrese by</li>
+						</ul>
+					</section> !-->
+					<section>
+						<h3>Scaling & Bills...</h3>
+						<ul>
+							<li>Autoscale: Dynamically scale to meet changing demand.</li>
+							<li>You can schedule events.</li>
+							<li>Reduces management overhead.</li>
+							<li>Difficult to predict how much you will spend.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Caching Services</h3>
+						<ul>
+							<li>CloudFlare</li>
+							<li>Netlify</li>
+							<li>AWS CloudFront</li>
+							<li>Azure CDN</li>
+							<li>Fastly</li>
+							<li>Akamai</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Network</h3>
+						<ul>
+							<li>Load balancers</li>
+							<li>Private Virtual Networks</li>
+							<li>VPNs</li>
+							<li>letsEncrypt</li>
 						</ul>
 					</section>
 					<section>
-						<h3>Network</h3>
+						<h4>IPv4 vs IPv6</h4>
+						<a href="files/IPv4-vs-IPv6.png"><img style="width: 800px;" src="files/IPv4-vs-IPv6.png"/></a>
+						<br/>
+						<p style="font-size: 70%;"><a href="https://www.caida.org/projects/as-core/historical/">Address Usage</a> & <a href="https://pulse.internetsociety.org/technologies">Technology Adoption</a>.</p>
 					</section>
 					<section>
-						<h3>Programming Languages</h3>
+						<h4>Network example</h4>
+						<a href="files/NetworkExampleDiagram.png"><img style="height: 450px;" src="files/NetworkExampleDiagram.png"/></a>
 					</section>
 					<section>
 						<h3>Security</h3>
+						<ul style="font-size: 80%;">
+							<li><a href="https://en.wikipedia.org/wiki/Infrastructure_security">Infrastructure security:</a> <a href="https://www.cisa.gov/sites/default/files/publications/Cybersecurity%20and%20Physical%20Security%20Convergence_508_01.05.2021_0.pdf">Physical & Cybersecurity Security</a></li>
+							<li><a href="https://aws.amazon.com/compliance/shared-responsibility-model/">Shared Responsibility Model</a> <span style="font-size: 80%;">(ie. you run your infrastracture on AWS)</span></li>
+							<li><a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS</a>  <span style="font-size: 80%;">(Payment Card Industry Data Security Standard)</span></li>
+							<li><a href="https://www.cve.org/">CVE</a> <span style="font-size: 80%;">(catalog publicly disclosed cybersecurity vulnerabilities)</span></li>
+							<li>Security Team Notices <span style="font-size: 80%;">(OS examples)</span> <a href="https://www.debian.org/security/">Debian</a>, <a href="https://ubuntu.com/security/notices">Ubuntu</a> & <a href="https://security.alpinelinux.org/">Alpine</a>.</li>
+						</ul>
 					</section>
+				</section>
+				<section>
 					<section>
 						<h3>Monitoring</h3>
+						<ul>
+							<li><a href="https://azure.microsoft.com/en-us/products/monitor">Azure Monitor</a> <span style="font-size: 70%;">(Insights, Visualize, Analize, Respond, more...)</span></li>
+							<li><a href="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</a> <span style="font-size: 70%;">(Collect, Monitor, Act & Analize)</span></li>
+							<li><a href="https://newrelic.com/pricing">New Relic</a> <span style="font-size: 70%;">(Software/solution as a service)</span></li>
+							<li><a href="https://www.datadoghq.com/pricing/">DataDog</a> <span style="font-size: 70%;">(Online Service to store logs)</span></li>
+							<li><a href="https://www.elastic.co/what-is/elk-stack">ELK stack</a> <span style="font-size: 70%;">(Elasticsearch, Logstash & Kibana)</span></li>
+							<li><a href="https://prometheus.io/">Prometheus</a> <span style="font-size: 70%;">(OSS: Collecting your data)</span></li>
+							<li><a href="https://grafana.com/">Grafana</a> <span style="font-size: 70%;">(OSS: Graphing your data)</span></li>
+							<li><a href="https://github.com/influxdata/influxdb">InfluxDB</a> <span style="font-size: 70%;">(OSS: Time Series DB)</span></li>
+						</ul>
+						<br/><br/>
+						<p style="font-size: 50%;"><a href="https://www.youtube.com/watch?v=6UKIbbbflAs&list=PLpeDXSh4nHjRK_6I7HVLCw8k_ZTopYv5i&t=122s">Do you know what your Drupal is doing? Observe it!</a><br/><span style="font-size: 70%;">(Prometheus & Graphana example @ Drupal Prague 2022)</span></p>
 					</section>
 					<section>
-						<h3>Scaling & Capacity Management</h3>
+						<h4>Graphs</h4>
+						<p>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_apache_accesses-year.png"/>
+							</ul>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_mysql_queries-year.png"/>
+							</ul>
+						</p>
+						<p>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_threads-year.png"/>
+							</ul>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_load-year.png"/>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h4>Cloud Integrated: AWS</h4>
+						<a href="files/AWS_CloudWatch.png"><img src="files/AWS_CloudWatch.png"/></a>
+					</section>
+					<section>
+						<h4>Cloud Integrated: Azure</h4>
+						<a href="files/Azure_Monitor.png"><img src="files/Azure_Monitor.png"/></a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Docker "World"</h3>
+						<ul>
+							<li>Docker:
+								<ul>
+									<li>dockerfile</li>
+									<li>host, images, container, ...</li>
+									<li>Registry</li>
+									<li>Docker Compose</li>
+									<li>...</li>
+								</ul>
+							</li>
+							<li>Local Envs: <span style="font-size: 70%;">Docksal, Lando, DDEV, others...</span></li>
+							<li>Kubernetes?!?</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Docker</h4>
+						<a href="files/Docker_Components.png"><img src="files/Docker_Components.png"/></a>
+					</section>
+					<section>
+						<h4>Docker Compose</h4>
+						<a href="files/DockerComposeExample.png"><img src="files/DockerComposeExample.png"/></a>
+						<p style="font-size: 50%;">Why? You can define your application stack in a file (and use it to build it).</p>
+					</section>
+					<section>
+						<h4>Making it simple...</h4>
+						<a href="files/ddev_docksal_lando.png"><img src="files/ddev_docksal_lando.png"/></a>
+						<p style="font-size: 50%;">Why? Templates for Drupal, Wordpress, LAMP, Node, etc...</p>
+					</section>
+					<section>
+						<h3>Kubernetes</h3>
+						<ul>
+							<li>vs Docker, they have different:
+								<ul>
+									<li><a href="https://kubernetes.io/docs/concepts/overview">Goals</a> <span style="font-size: 80%;">(managing containerized workloads and services)</span></li>
+									<li><a href="#/5/5">Architecture</a></li>
+									<li><a href="https://kubernetes.io/docs/concepts/services-networking/">Moving parts</a></li>
+									<li><a href="https://github.com/kubernetes/registry.k8s.io">Registry</a></li>
+								</ul>
+							</li>
+							<li>Normally it runs containers over ContainerD</li>
+							<li>Docker Compose can be translated with <a href="https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/">Kompose</a>.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Kubernetes: Architecture</h4>
+						<a href="files/kubernetes1_ArchitectureDiagram.png"><img style="width: 700px;" src="files/kubernetes1_ArchitectureDiagram.png"/></a>
+					</section>
+					<section>
+						<h4>Kubernetes: Node Internals</h4>
+						<a href="files/kubernetes2_NodesExplained.svg"><img style="width: 500px; background: white;" src="files/kubernetes2_NodesExplained.svg"/></a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>CI/CD alternatives</h3>
+						<p style="font-size: 50%;">(continuous integration & continuous delivery/deployment)</p>
+						<br/>
+						<ul>
+							<li>CircleCI</li>
+							<li>Github Actions</li>
+							<li>GitlabCI</li>
+							<li>Bitbucket pipelines</li>
+							<li>Jenkins</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Programming & Languages</h4>
+						<ul>
+							<li>Bash</li>
+							<li>Python</li>
+							<li>YML</li>
+							<li>Ansible</li>
+							<li>terraform</li>
+						</ul>
+					</section>
+					<section>
+						<h4>CircleCI</h4>
+						<a href="https://circleci.com/docs/assets/img/docs/config-elements.png"><img style="height: 500px;" src="https://circleci.com/docs/assets/img/docs/config-elements.png"/></a>
+						<p style="font-size: 70%;">weKnow articles: <a href="https://weknowinc.com/blog/circleci-101">CircleCI 101</a> & <a href="https://weknowinc.com/blog/introduction-automation-github-actions">Github Actions</a>.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Survey: Próximo tema</h3>
+						<ul>
+							<li>Cloud Computing (ie. AWS)</li>
+							<li>Docker (innerworking, build & debug)</li>
+							<li>CI/CD (ie. CircleCI)</li>
+							<li>¿Otro? ¿Cuál?</li>
+						</ul>
 					</section>
 				</section>
 			</div>
@@ -115,12 +320,12 @@
 		!-->
 
 		<!-- Local !-->
-		<script src="./dist/reveal.min.js"></script>
-		<script src="./dist/zoom.min.js"></script>
-		<script src="./dist/notes.min.js"></script>
-		<script src="./dist/search.min.js"></script>
-		<script src="./dist/markdown.min.js"></script>
-		<script src="./dist/highlight.min.js"></script>
+		<script src="../dist/reveal.min.js"></script>
+		<script src="../dist/zoom.min.js"></script>
+		<script src="../dist/notes.min.js"></script>
+		<script src="../dist/search.min.js"></script>
+		<script src="../dist/markdown.min.js"></script>
+		<script src="../dist/highlight.min.js"></script>
 
 		<script>
 			// Also available as an ES module, see:
