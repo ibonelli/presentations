@@ -78,8 +78,7 @@
 				</section>
 				<section>
 					<section>
-						<h3>Hosting</h3>
-						<h4>What we can use today</h4>
+						<h3>Hosting: What we can use today</h3>
 						<ul>
 							<li>On-Prem</li>
 							<li>Cloud Computing:
@@ -90,6 +89,7 @@
 								</ul>
 							</li>
 						</ul>
+						<p>What should you choose?</p>
 					</section>
 					<section>
 						<h4>Cloud Computing Mayor Players</h4>
@@ -102,15 +102,79 @@
 						<a href="files/AWS-vs-Azure-vs-GCP.jpg"><img style="width: 800px;" src="files/AWS-vs-Azure-vs-GCP.jpg"/></a>
 					</section>
 					<section>
-						<h3>Network & Security</h3>
+						<h4>On Prem vs Cloud</h4>
+						<a href="files/OnPrem_vs_Cloud.jpeg"><img style="width: 800px;" src="files/OnPrem_vs_Cloud.jpeg"/></a>
+						<br/>
+						<p style="font-size: 70%;"><a href="https://www.scirp.org/journal/paperinformation.aspx?paperid=87661">Cloud versus On-Premise Computing</a>.</p>
+					</section>
+					<section>
+						<h3>Scaling Up vs Out</h3>
+						<a href="files/ScaleUp_vs_ScaleOut.png"><img src="files/ScaleUp_vs_ScaleOut.png"/></a>
+					</section>
+					<!-- <section>
+						<p style="text-align: left;">Scaling & Capacity Management:</p>
 						<ul>
-							<li>IPv4 vs IPv6</li>
+							<li>Minimum & maximun number of VMs</li>
+							<li>Scale out & in CPU threshold</li>
+							<li>Number of VMs to increase/decrese by</li>
+						</ul>
+					</section> !-->
+					<section>
+						<h3>Scaling & Bills...</h3>
+						<ul>
+							<li>Autoscale: Dynamically scale to meet changing demand.</li>
+							<li>You can schedule events.</li>
+							<li>Reduces management overhead.</li>
+							<li>Difficult to predict how much you will spend.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Caching Services</h3>
+						<ul>
+							<li>CloudFlare</li>
+							<li>Netlify</li>
+							<li>AWS CloudFront</li>
+							<li>Azure CDN</li>
+							<li>Fastly</li>
+							<li>Akamai</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Network</h3>
+						<ul>
 							<li>Load balancers</li>
 							<li>Private Virtual Networks</li>
 							<li>VPNs</li>
 							<li>letsEncrypt</li>
 						</ul>
 					</section>
+					<section>
+						<h4>IPv4 vs IPv6</h4>
+						<a href="files/IPv4-vs-IPv6.png"><img style="width: 800px;" src="files/IPv4-vs-IPv6.png"/></a>
+						<br/>
+						<p style="font-size: 70%;"><a href="https://www.caida.org/projects/as-core/historical/">Address Usage</a> & <a href="https://pulse.internetsociety.org/technologies">Technology Adoption</a>.</p>
+					</section>
+					<section>
+						<h4>Network example</h4>
+						<a href="files/NetworkExampleDiagram.png"><img style="height: 450px;" src="files/NetworkExampleDiagram.png"/></a>
+					</section>
+					<section>
+						<h3>Security</h3>
+						<ul style="font-size: 80%;">
+							<li><a href="https://en.wikipedia.org/wiki/Infrastructure_security">Infrastructure security:</a> <a href="https://www.cisa.gov/sites/default/files/publications/Cybersecurity%20and%20Physical%20Security%20Convergence_508_01.05.2021_0.pdf">Physical & Cybersecurity Security</a></li>
+							<li><a href="https://aws.amazon.com/compliance/shared-responsibility-model/">Shared Responsibility Model</a> <span style="font-size: 80%;">(ie. you run your infrastracture on AWS)</span></li>
+							<li><a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS</a>  <span style="font-size: 80%;">(Payment Card Industry Data Security Standard)</span></li>
+							<li><a href="https://www.cve.org/">CVE</a> <span style="font-size: 80%;">(catalog publicly disclosed cybersecurity vulnerabilities)</span></li>
+							<li>Security Team Notices <span style="font-size: 80%;">(OS examples)</span> <a href="https://www.debian.org/security/">Debian</a>, <a href="https://ubuntu.com/security/notices">Ubuntu</a> & <a href="https://security.alpinelinux.org/">Alpine</a>.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
 					<section>
 						<h3>Monitoring</h3>
 						<ul>
@@ -125,6 +189,33 @@
 						</ul>
 						<br/><br/>
 						<p style="font-size: 50%;"><a href="https://www.youtube.com/watch?v=6UKIbbbflAs&list=PLpeDXSh4nHjRK_6I7HVLCw8k_ZTopYv5i&t=122s">Do you know what your Drupal is doing? Observe it!</a><br/><span style="font-size: 70%;">(Prometheus & Graphana example @ Drupal Prague 2022)</span></p>
+					</section>
+					<section>
+						<h4>Graphs</h4>
+						<p>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_apache_accesses-year.png"/>
+							</ul>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_mysql_queries-year.png"/>
+							</ul>
+						</p>
+						<p>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_threads-year.png"/>
+							</ul>
+							<ul class="col" style="width: 350px; display: inline-block; vertical-align: top;">
+								<img src="files/munin_load-year.png"/>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h4>Cloud Integrated: AWS</h4>
+						<a href="files/AWS_CloudWatch.png"><img src="files/AWS_CloudWatch.png"/></a>
+					</section>
+					<section>
+						<h4>Cloud Integrated: Azure</h4>
+						<a href="files/Azure_Monitor.png"><img src="files/Azure_Monitor.png"/></a>
 					</section>
 				</section>
 				<section>
@@ -157,6 +248,29 @@
 						<h4>Making it simple...</h4>
 						<a href="files/ddev_docksal_lando.png"><img src="files/ddev_docksal_lando.png"/></a>
 						<p style="font-size: 50%;">Why? Templates for Drupal, Wordpress, LAMP, Node, etc...</p>
+					</section>
+					<section>
+						<h3>Kubernetes</h3>
+						<ul>
+							<li>vs Docker, they have different:
+								<ul>
+									<li><a href="https://kubernetes.io/docs/concepts/overview">Goals</a> <span style="font-size: 80%;">(managing containerized workloads and services)</span></li>
+									<li><a href="#/5/5">Architecture</a></li>
+									<li><a href="https://kubernetes.io/docs/concepts/services-networking/">Moving parts</a></li>
+									<li><a href="https://github.com/kubernetes/registry.k8s.io">Registry</a></li>
+								</ul>
+							</li>
+							<li>Normally it runs containers over ContainerD</li>
+							<li>Docker Compose can be translated with <a href="https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/">Kompose</a>.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Kubernetes: Architecture</h4>
+						<a href="files/kubernetes1_ArchitectureDiagram.png"><img style="width: 700px;" src="files/kubernetes1_ArchitectureDiagram.png"/></a>
+					</section>
+					<section>
+						<h4>Kubernetes: Node Internals</h4>
+						<a href="files/kubernetes2_NodesExplained.svg"><img style="width: 500px; background: white;" src="files/kubernetes2_NodesExplained.svg"/></a>
 					</section>
 				</section>
 				<section>
@@ -195,7 +309,6 @@
 							<li>Cloud Computing (ie. AWS)</li>
 							<li>Docker (innerworking, build & debug)</li>
 							<li>CI/CD (ie. CircleCI)</li>
-							<li>Network, Security & Monitoring</li>
 							<li>¿Otro? ¿Cuál?</li>
 						</ul>
 					</section>
