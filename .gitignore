@@ -106,3 +106,5 @@ dist
 # Ignoring some Python files as well
 .pyc
 
+# Ignoring External non HTML Presentations
+weknow-general
